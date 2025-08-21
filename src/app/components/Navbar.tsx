@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -17,9 +17,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-transparent"
-          : "bg-navy backdrop-blur-md text-cream"
+        isScrolled ? "bg-navy/90 backdrop-blur-md text-cream" : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between h-16 bg-opacity-25">
@@ -30,13 +28,16 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6">
-          <Link href="/" className="hover:text-peach">
-            Home
+          <Link href="#career" className="hover:text-peach">
+            Career
           </Link>
-          <Link href="/about" className="hover:text-peach">
+          <Link href="#about" className="hover:text-peach">
             About
           </Link>
-          <Link href="/contact" className="hover:text-peach">
+          <Link href="#projects" className="hover:text-peach">
+            Projects
+          </Link>
+          <Link href="#contact" className="hover:text-peach">
             Contact
           </Link>
         </div>
@@ -56,21 +57,28 @@ export default function Navbar() {
         <div className="md:hidden bg-navy text-cream">
           <div className="flex flex-col space-y-2 px-4 py-3">
             <Link
-              href="/"
+              href="#career"
               className="hover:text-peach"
               onClick={() => setIsOpen(false)}
             >
-              Home
+              Career
             </Link>
             <Link
-              href="/about"
+              href="#about"
               className="hover:text-peach"
               onClick={() => setIsOpen(false)}
             >
               About
             </Link>
             <Link
-              href="/contact"
+              href="#projects"
+              className="hover:text-peach"
+              onClick={() => setIsOpen(false)}
+            >
+              Projects
+            </Link>
+            <Link
+              href="#contact"
               className="hover:text-peach"
               onClick={() => setIsOpen(false)}
             >
