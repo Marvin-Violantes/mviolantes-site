@@ -1,54 +1,66 @@
 /* app/globals.css */
 
+
 /* 1) Load Tailwind v4 */
 @import "tailwindcss";
 
+
 /* 2) Your custom theme tokens (Tailwind v4) */
 @theme {
-  --color-cream: #F5E2D9;
-  --color-peach: #EFBD8B;
-  --color-mocha: #9C7464;
-  --color-mist:  #CED3DF;
-  --color-navy:  #17456E;
-  --color-slate: #2F3648;
+--color-white: #ffffff;
+--color-gray-light: #f7f7f7;
+--color-cream: #F5E2D9;
+--color-peach: #EFBD8B;
+--color-mocha: #9C7464;
+--color-mist: #CED3DF;
+--color-navy: #17456E;
+--color-slate: #2F3648;
 
-  /* Optional: brand fonts & radius */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --radius-md: 0.75rem;
+
+/* Fonts & radius */
+--font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+--radius-md: 0.75rem;
 }
+
 
 /* 3) Base element resets/tweaks (Tailwind preflight is already included) */
 html, body {
-  height: 100%;
+height: 100%;
 }
+
 
 body {
-  @apply bg-cream text-slate antialiased;
-  font-family: var(--font-sans);
+@apply bg-white text-slate antialiased;
+font-family: var(--font-sans);
 }
 
-/* 4) Example utility helpers (optional) */
+
+/* 4) Utility helpers */
 .container {
-  @apply mx-auto px-6 max-w-5xl;
+@apply mx-auto px-6 max-w-5xl;
 }
+
 
 .btn {
-  @apply inline-flex items-center justify-center rounded-[var(--radius-md)] px-5 py-2.5
-         bg-peach text-slate/90 font-medium shadow-sm transition
-         hover:bg-mist hover:text-slate;
+@apply inline-flex items-center justify-center rounded-[var(--radius-md)] px-5 py-2.5
+bg-peach text-slate/90 font-medium shadow-sm transition
+hover:bg-mist hover:text-slate;
 }
 
-/* 5) Example heading scale (optional) */
+
+/* 5) Heading scale */
 h1 { @apply text-4xl md:text-5xl font-bold text-navy; }
 h2 { @apply text-2xl md:text-3xl font-semibold text-slate; }
-p  { @apply leading-relaxed; }
+p { @apply leading-relaxed; }
 
-/* 6) (Optional) Dark mode tokens — enable by adding 'class="dark"' to <html> */
+
+/* 6) Dark mode tokens */
 @media (prefers-color-scheme: dark) {
-  .dark &,
-  :root.dark & {
-    --color-cream: #2f3648; /* swap roles a bit for dark */
-    --color-slate: #F5E2D9;
-    --color-mist:  #9C7464;
-  }
+.dark &,
+:root.dark & {
+--color-white: #2f3648;
+--color-slate: #F5E2D9;
+--color-mist: #9C7464;
+--color-cream: #2F3648;
+}
 }
