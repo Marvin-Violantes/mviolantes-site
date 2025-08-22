@@ -1,5 +1,5 @@
 // Hero.tsx
-import { ArrowRight, Download } from "lucide-react";
+import { Download } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -14,7 +14,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl text-slate/80 mb-8 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-            Hello, welcome to my website. I'm Marvin, also known as Mambo.
+            Hello, welcome to my website. I&#39;m Marvin, also known as Mambo.
             Please wander around to learn more about me.
           </p>
 

@@ -37,7 +37,7 @@ export default function About() {
         also began my M.S. in Computer Science. In January, I will continue my
         M.S. in Computer Science at the Georgia Institute of Technology while
         working full time. My goal is to use technology to solve problems in
-        ways that make people's lives easier and more efficient.
+        ways that make people&apos;s lives easier and more efficient.
       </p>
 
       <div className="w-full max-w-4xl text-center mb-12 bg-white rounded-lg shadow-lg p-6">
